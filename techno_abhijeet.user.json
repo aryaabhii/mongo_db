@@ -1,0 +1,52 @@
+[
+  {
+  "_id": {
+    "$oid": "65034ea3f00fafba2d1981a7"
+  },
+  "id": 1,
+  "name": "Abhijeet Kumar",
+  "age": 21,
+  "address": "Delhi",
+  "active": true
+},
+{
+  "_id": {
+    "$oid": "650351571145f82fe52de66a"
+  },
+  "id": 2,
+  "name": "Abhishek Kumar",
+  "age": 21,
+  "address": "Delhi",
+  "active": true
+},
+{
+  "_id": {
+    "$oid": "650352e21145f82fe52de66b"
+  },
+  "id": 3,
+  "name": "Sonu Kumar",
+  "age": 21,
+  "address": "Patna",
+  "active": true
+},
+{
+  "_id": {
+    "$oid": "650352e21145f82fe52de66c"
+  },
+  "id": 4,
+  "name": "Anurag Singh",
+  "age": 21,
+  "address": "Patna, Bihar",
+  "active": true
+},
+{
+  "_id": {
+    "$oid": "650352e21145f82fe52de66d"
+  },
+  "id": 5,
+  "name": "Akshay Kumar",
+  "age": 21,
+  "address": "Daniyawan",
+  "active": true
+}
+]
