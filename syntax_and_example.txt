@@ -96,6 +96,18 @@
       }
     ]
 
+10.) How to update document?
+▶️ SYNTAX:- db.<collection_name>.updateOne(<filter>, <update>) -> for single
+    Ex:-   db.user.updateOne({name:"Abhishek Kumar"},{$set: {name:"Abhishek Kumar Sharma"}})
+    Note:  $set replace the value of field with the specified value.
+
+▶️ SYNTAX:- db.<collection_name>.updateOne(<filter>, <update>) -> for multiple
+    Ex: db.user.updateMany({address:"Delhi"},{$set: {active:false}})
+
+10.) 
+▶️ 
+
+
 
 
 
