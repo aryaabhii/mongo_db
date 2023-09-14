@@ -1,0 +1,102 @@
+
+********** MONGO DB SYNTAX AND EXAMPLES WITH IMAGES *************
+
+1.) Hoow to start db using cmd?
+▶️ mongosh
+
+2.) How can show all database?
+▶️ show dbs
+
+3.) How to create and connect db?
+▶️ use <db_name> 
+❗ Note:  If db is not created then it will create. but it need one collection otherwise it will not show.
+
+4.) How to create a collection?  
+▶️ db.<table_name>.insertOne({})
+ 	  EX: db.user.insertOne({id:1, name:"Abhijeet Kumar", age:21, address:"Delhi", active:true} 
+    
+5.) How can show collections?
+▶️ show collections
+
+6.) How can show records from document?
+▶️ db.<collection_name>.find()
+    Ex:  db.user.find()
+    Ex:  db.user.find().pretty() :- The pretty func will help to show the data in prettier form.
+
+7.) How to close db? 
+▶️ quite()
+
+8.) How to insert multiple records at a time?
+▶️ db.user.insertMany([{id:3, name:"Sonu Kumar", age:21, address:"Patna", active:true}, {id:4, name:"Anurag Singh", age:21, address:"Patna, Bihar", active:true}, {id:5, name:"Akshay Kumar", age:21, address:"Daniyawan", active:true}, {}])
+
+9.) How to read data:-
+▶️ db.collection.fins(query, projection)
+
+ ❣️ Ex:- 1: 
+
+    db.user.find({name:"Sonu Kumar"})
+    [
+      {
+        _id: ObjectId("650352e21145f82fe52de66b"),
+        id: 3,
+        name: 'Sonu Kumar',
+        age: 21,
+        address: 'Patna',
+        active: true
+      }
+    ]
+
+  ❣️ Ex:- 2:  show only name
+
+    db.user.find({name:"Sonu Kumar"}, {name:1})
+    [ { _id: ObjectId("650352e21145f82fe52de66b"), name: 'Sonu Kumar' } ]
+
+  ❣️ Ex:- 3: show name Without id 
+
+    db.user.find({name:"Sonu Kumar"}, {_id:0, name:1})
+    [ { name: 'Sonu Kumar' } ]
+
+  ❣️ Ex:- 4: show only one data of active:true from first doc
+  
+    db.user.find({active:true}).limit(1)
+    [
+      {
+        _id: ObjectId("65034ea3f00fafba2d1981a7"),
+        id: 1,
+        name: 'Abhijeet Kumar',
+        age: 21,
+        address: 'Delhi',
+        active: true
+      }
+    ]
+
+  ❣️ Ex:- 5: show only one data of active:true from first doc with other method Without limit()
+    
+    db.user.findOne({active:true})
+    {
+      _id: ObjectId("65034ea3f00fafba2d1981a7"),
+      id: 1,
+      name: 'Abhijeet Kumar',
+      age: 21,
+      address: 'Delhi',
+      active: true
+    }
+
+  ❣️ Ex:- 6: skipping first doc 
+    
+    db.user.find({active:true}).limit(1).skip(1)
+    [
+      {
+        _id: ObjectId("650351571145f82fe52de66a"),
+        id: 2,
+        name: 'Abhishek Kumar',
+        age: 21,
+        address: 'Delhi',
+        active: true
+      }
+    ]
+
+
+
+
+
