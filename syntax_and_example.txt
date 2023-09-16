@@ -104,8 +104,9 @@
 ▶️ SYNTAX:- db.<collection_name>.updateOne(<filter>, <update>) -> for multiple
     Ex: db.user.updateMany({address:"Delhi"},{$set: {active:false}})
 
-10.) 
-▶️ 
+10.) How to delete document?
+▶️ SYNTAX:- db.<coll_name>.deleteMany(DeletionCreateria)
+    Ex:-db.user.deleteMany({name:"Abhijeet Kumar"});
 
 
 
