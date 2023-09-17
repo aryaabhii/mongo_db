@@ -206,4 +206,4 @@ const deleteDoc = async (id) => {
     }
 }
 
-deleteDoc("6506a192765e7caf0b3848c2"); 
+// deleteDoc("6506a192765e7caf0b3848c2"); 
